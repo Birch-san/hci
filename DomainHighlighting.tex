@@ -1,0 +1,106 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[section]{placeins}
+
+\usepackage[]{hyperref}
+\usepackage{cleveref}
+
+\usepackage[sorting=none,backend=bibtex]{biblatex}
+\bibliography{DomainHighlighting}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{float}
+
+\usepackage{siunitx}
+
+\usepackage{times}
+\usepackage{graphicx,epsfig}
+\usepackage[leftcaption]{sidecap}
+\usepackage{subfigure} % figures can have sub chunks
+\usepackage{geometry} % this maxes page usage, making the below unnecessary
+\textwidth = 6.75in
+\oddsidemargin = -0.25in
+\textheight = 10in
+\topmargin = -0.5in
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\pagestyle{fancy}
+\lhead{{\it Alex Birch}}
+\chead{Does domain highlighting help people identify phishing sites?}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\newcommand{\goodgap}{%
+ \hspace{\subfigtopskip}%
+ \hspace{\subfigbottomskip}}
+
+\newcommand{\citeauthoryear}[1]{%
+ \citeauthor{#1}%
+ ~(\citeyear{#1})}
+
+\title{(Review of) Does domain highlighting help people identify phishing sites?}
+\author{Alex Birch (akb29)}
+
+
+\begin{document}
+\maketitle
+
+\section{Article Contribution}
+This paper, \citeauthoryear{Lin:2011:DHH:1978942.1979244}, explores the effectiveness of `domain highlighting' as a mechanism for protecting users against phishing attacks. `Domain highlighting' is a feature in web browsers such as Internet Explorer and Google Chrome, that makes more prominent the domain portion of a website address, with the intention of inviting users to verify that they are on a legitimate website domain.
+
+The effect is concluded to be significant, but meagre, and certainly not great enough to be relied upon as the sole source of phishing protection.
+
+The authors evaluated the effectiveness of domain highlighting by measuring user performance in classification of website legitimacy. A test set of familiar legitimate websites were chosen. Included also were copies of those websites, except with the website domain altered by HTTP proxy. This was felt to simulate subtle phishing tactics --- where the website is visually identical to the real website, but is hosted on a different (possibly similar-sounding) domain.
+
+Participants were required to rate each website's trustworthiness on a five-point scale (1 being `unsafe' and 5 being `safe'). The study consisted of two phases: in phase 1, no particular instructions were given on how to evaluate web site trustworthiness. Phase 2 asked the participants to re-evaluate all of the web sites, but paying special attention to the address bar.
+
+It was found that Phase 2 effected a significant (though minimal) improvement in classifying fraudulent websites as unsafe. Legitimate websites saw no significant change in classification though. Overall performance remained poor; by phase 2, still as many as 44\% of fradulent pages remained incorrectly classified.
+
+Notably, domain highlighting was found to be variously beneficial depending on what category of user was studied. Exit interviews revealed the evaluation strategies used by the participants. Three types of user were seen: A, AB and B.
+
+Type A people focused solely on information present in the browser's content pane, judging credibility based on factors like information branding. This was consistent with prior findings\cite{Jakobsson:2007:ITQ:1785594.1785639,Jagatic:2007:SP:1290958.1290968,Fogg:2001:MWS:365024.365037} on how people judge web site credibility.
+
+Type B people consistently focused on the information found in the address bar, and also the types of information being requested by the website, plus other security indicators. Information from the content pane, such as branding, was recruited but not the sole source of judgement.
+
+Type AB people were a composite of the previous two types, primarily relying on content, but occasionally employing strategies used by Type B. They were much more variable in the information they considered in each test.
+
+Type B generally performed better than type AB, who generally performed better than Type A. But even types A and AB had at best a `hit or miss' success rate.
+
+Types AB and B demonstrated the most improvement after being instructed to attend to the address bar. Type A users were found to elicit no meaning from the information there. Type AB attended, but were often unsure of what to look for in the URL, and had an incomplete understanding of phishing indicators.
+
+The article concludes that success rate of all users could be improved by education; Type A users could benefit from being informed of the importance of the address bar, and other types could benefit from recognising more types of obfuscation. Suggestions are made also about improving the visibility of the address, to draw attention, and also visualizing the URL in a less complicated manner.
+
+%multiple classes of obfuscation
+
+\section{Justifiability of Conclusions}
+Some glaring problems exist with the study. First and foremost is the lack of a control group --- no measurements are done for address bar attendance with domain highlighting turned off. This omission is acknowledged in the `Limitations and Future Studies' section, with future work recommended to investigate this difference. Nevertheless, it is irresponsible to attribute trends emergent after address bar attendance to `domain highlighting', when it is explicitly unknown whether `domain highlighting' was the contributing factor. In fact, \citeauthor{Lin:2011:DHH:1978942.1979244} declare that a majority of participants ``were not even aware that the domain portion of the URL was highlighted''. Admittedly its going un-noticed does not imply that the highlighting could not have an effect --- users will not necessarily internalise information that is available in the environment\cite{morton1967singular}. But it would be more correct for the article to attribute findings to `address bar attendance' than to `domain highlighting'.
+
+Another limitation of the study is that it can portray only a reasonable upper bound on the effectiveness of this phishing protection. As \citeauthor{Lin:2011:DHH:1978942.1979244} point out, these measurements are taken in the context of users being asked to scrutinize legitimacy, whereas in real-world browsing, security concerns are secondary goals to task completion\cite{whitten1999johnny,kumaraguru2010teaching}. But worse than this, it is possible that rationalization processes of the participants are overlooked. Participants are asked to provide their reasons for each classification, which forces a re-evaluation and rationalization of reasoning. If participants notice inconsistencies in their logic here, perhaps they will change their decision (where in the real world they would not have to justify their original decision to anyone).
+
+Further on the issue of rationalization, it is unknown whether the improved performance in phase 2 is due to attendance to address bar, or due simply to re-evaluation of decisions on a second attempt, recruiting the knowledge and experiences from the first phase of the experiment. A control group where no instruction is given in either phase would distinguish this.
+
+Success of the introduction of `domain highlighting' is measured based on the change between the first and second phase. This is a flawed approach, as users who have been attending to the address bar to begin with would either exhibit no change, or exhibit change based solely on the clue that the address is an important factor (which might provoke more attention than would normally be given). It would be useful to determine who is using the feature beforehand, and analyse separately their progression between phases.
+
+The study attempts to model domain spoofing in isolation, by editing website addresses with an HTTP proxy, but otherwise still showing the real website. It is possible this is an over-simplification of what is possible for a spoofing website to mimic. There exist a few factors that users could rely on for legitimacy, that were not emulated --- a spoofed version of a regularly visited website will not be in the user's browser cache, nor co-located on the same server, so load times will be anomolous, perhaps visibly so. Additionally a spoofed website could never know the cookies that the original knows, so could not do thinks like automatically typing in the user's username. Admittedly both of these factors are irrelevant when the user is on an unfamiliar computer, so perhaps they can be overlooked. 
+
+Overall the paper's claims are only dubiously justified.
+
+%1000
+\section{Further Work Described}
+% perhaps check mental models of domains!
+% subdomain highlighting
+
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
+%\glsaddall
+\printbibliography
+
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[section]{placeins}
+
+\usepackage[]{hyperref}
+\usepackage{cleveref}
+
+\usepackage[sorting=none,backend=bibtex,style=authoryear]{biblatex}
+\bibliography{Voluntweeters}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{float}
+
+\usepackage{siunitx}
+
+\usepackage{times}
+\usepackage{graphicx,epsfig}
+\usepackage[leftcaption]{sidecap}
+\usepackage{subfigure} % figures can have sub chunks
+\usepackage{geometry} % this maxes page usage, making the below unnecessary
+\textwidth = 6.75in
+\oddsidemargin = -0.25in
+\textheight = 10in
+\topmargin = -0.5in
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\pagestyle{fancy}
+\lhead{{\it Alex Birch}}
+\chead{``Voluntweeters'': Self-organizing by Digital Volunteers in Times of Crisis}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\newcommand{\goodgap}{%
+ \hspace{\subfigtopskip}%
+ \hspace{\subfigbottomskip}}
+
+\newcommand{\citeauthoryear}[1]{%
+ \citeauthor{#1}%
+ ~(\citeyear{#1})}
+
+\title{(Review of) ``Voluntweeters'': Self-organizing by Digital Volunteers in Times of Crisis}
+\author{Alex Birch (akb29)}
+
+
+\begin{document}
+\maketitle
+
+\section{Article Contribution}
+This article, \cite{Starbird:2011:VSD:1978942.1979102}, describes an emergent form of volunteerism in crisis situations. Its premise is that social microblogging enables new kinds of support from `digital volunteers'. It provides an empirical analysis of the works and motivations of `crisis tweeters' who used Twitter microblogging to help victims of the 2010 Haiti Earthquake.
+
+Analysis was focused on the use of the research group's own bespoke Twitter syntax, `Tweak the Tweet', designed to assist in computational filtering and classification of emergency-related information. An unexpected social phenomenon was observed --- `translators' emerged as a class of remote volunteers, rewriting existing unstructured information into TtT syntax. Motivations for translation were qualitatively assessed through interview, the appeal found to lie in the perceived `authority' and `standardization' of such a syntax. In particular it was seen as a signal that information had been verified by a relatively experienced user in the space.
+
+Two types of translator were identified: those whose primary activity was converting information in TtT syntax, and those who acted as `remote operators' to support people `on the ground' (proximal to the disaster). For these remote operators, TtT was just one of many tools recruited for the activity of moving information between sources. Additionally, the activities that remote operators involved themselves in were seen as more complex, and were a `progression' from simple retweeting (forwarding/broadcasting) or translating of tweets.
+
+Users were seen to evolve from isolated activity to building a set of network connections. Of particular interest was the self-organization of the network: a clear majority had never previously connected with the contacts they eventually connected with. Additionally the network was highly meshed, with each translator connecting with an average of 7.7 other translator-volunteers.
+
+The remainder of the paper attempts to explain how these emergent groups come together, through a framework provided by \citeauthor{kreps1994organizing}. A temporal sqeuence is put forward that the authors feel best explains the behavior of their emergent voluntweeter population: most well-developed are the inital mechanisms, `Resources' then `Activities', and there is some indication of progression to `Tasks' and `Domain' mechanistic stages.
+
+`Resources', was seen to be the entry mechanism for twitterers, and presented itself as the power of their technology: hashtags provided the filtering and search needed for organising activities. The TtT microsyntax gave further structure and searchability, as well as a perceived level of authority, giving it a role as an organizing feature. Another resource was the volunteers' own individual capacities, which were supported by the mobility of Twitter data.
+
+The next important mechanism was `Activities' --- graduation from data entry to coordinated activity with other people and groups. This involved conjoined virtual-physical actions such as eliciting favours. Activities were conjoined also with other entities, such as the collaborative reporting environment Ushahidi.
+
+The remaining mechnanisms, `Tasks' and `Domains', were described in part by division of labor. `Tasks' accounted for volunteers' splintering into private conversation groups to coordinate activity. It also described emergent standards, such as how to verify information, being divulged by mentors. Finally, `Domains' described the sustenance of identity post-crisis, to collaborate with further volunteering activities.
+
+Ultimately the paper asserts that the behaviour of these `crisis tweeters' can contribute to the understanding of `crowdsourcing', as a collection of resources, capacities, and a progression to more defined tasks and an organizational identity.
+
+\section{Justifiability of Conclusions}
+The paper concludes that self-organization in a highly-networked world, which was previously only attributed (broadly) to the phenomenon of ``crowdsourcing'', can now be more finely understood ``as a collection of resources, capacities and a progression to increasingly more defined tasks and even organizational identity''. Here it is referring to its discussion of how the observed behaviors map to \citeauthor{kreps1994organizing}'s work regarding how emergent self-organizing groups come together in disaster settings to meet unmet needs.
+
+\citeauthor{kreps1994organizing}'s framework to explain collective behaviour requires a progressive manifestation of four key features -- Domains (D), Activities (A), Resources (A) and Tasks (T) --- and claims that organizations can arise out of any sequential permutation of these mechanisms. \citeauthor{Starbird:2011:VSD:1978942.1979102} believe that voluntweeter behaviour is explained best by a temporal sequence of \textit{R$\rightarrow$A$\rightarrow$T$\rightarrow$D}. The paper puts forward strong empirical evidence for the first two of these factors (Resources and Activities), but since there is only small indication of the final two (Tasks and Domains), the claim is put into some doubt. Additionally it is admitted that their proposed sequence is an uncommon one in \citeauthor{kreps1994organizing}'s empirical taxonomy. \citeauthor{Starbird:2011:VSD:1978942.1979102} defend themselves by suggesting that today's ICT-supported environments may give rise to new taxonomies. Indeed \citeauthor{kreps1994organizing}'s studies were in a historical context, where social media and ICT were less prevalent. As for the weak findings for the latter parts of the sequence, \citeauthor{Starbird:2011:VSD:1978942.1979102} caution that ``not all emergent organizations endure long enough or organize completely enough to manifest all four attributes in their lifespans''.
+
+It is worth assessing the support for each of the self-organization mechanisms that \citeauthor{Starbird:2011:VSD:1978942.1979102} claim to observe. For `Resources', Twitter's tagging and filtering features and the TtT syntax undoubtedly enhance technology with improved computerized search and filtering, as they contribute a standard semantic structure. Furthermore, anecdotal evidence is provided by an interviewee of how categorized help requests were helpful to officials trying to respond to crises. Additionally, ``individual capacities'' are cited as a resource, with interviews supporting that entry-level activities such as translation were an initiator for self-organization (leading later to complex, collaborative roles like ``remote operator'').
+
+The `Activities' mechanism describes coordinated actions between people and groups, such as translating tweets of other users; the paper has much empirical evidence for this, measuring 1040 tweets translated into TtT, with 74 Twitter users identified as translators. Hybrid `virtual-physical' action is seen is seen in users like `@Melymello' who is shown to use her digital connections to procure tangible support for victims. A majority of interview respondents were observed to connect with Shaun King, a pastor of a faith-based organization.
+
+For `Tasks', examples are fewer but not absent; conversation excerpts are given to support the idea that a division of labor was created, in the form of private conversations. Interviews found that participants who identified as remote operators were wont to manage misinformation by controlling access with private conversations, and also challenged hoaxers, establishing an accepted standard.
+
+For `Domains', interviewees were found to variously embrace or abandon their identity as digital volunteers, with some users remaining active or describing their involvement in profile descriptions, contrasted with other users who fell into dormancy or deleted their accounts altogether.
+
+Overall, there is empirical support for most mechanisms, though `Domains' shows conflicting results. However this is consistent with the previous interjection that not all mechanisms manifest within the lifetime of the organization. The mapping of the organizational framework to crowdsourcing is thus credible.
+%The paper tries to demystify the now-diluted term ``crowdsourcing'' \em claimed to be now erroneously cast as a novel byproduct of new media \em by returning to its roots and 
+%There were limitations in a lot of the empirical analysis, but the paper was responsible enough to declare these.
+
+%Now, employing Kreps' framework to the behaviour.. is that enough to explain and idntify the underlying phenomenon?
+\section{Further Work Described}
+Whilst there is no explicit `Future Work' detailed, \citeauthor{Starbird:2011:VSD:1978942.1979102} do make predictions about the future. They assert that ``the digital volunteer will become a common and likely influential feature of social life''. Coupled with this paper's demystification of crowdsourcing, it is conceivable that work could emerge around how to promote digital volunteerism in crises, now that the motivations and initial mechanisms for self-organization are understood. Additionally, mapping their work to the mature sociological framework of \citeauthor{kreps1994organizing} enables derived findings around that social structure to be applied also to crowdsourcing, where previously it was a term used too broadly to be analysed in this way.
+
+A problem predicted by the framework was with retention of volunteers --- although some were observed to remain active for the entire measured period, and more still were observed to graduate to assisting with further crises, it remains the case that some accounts were deleted and others went inactive. There is scope here to investigate how to keep momentum, and transfer volunteers to new causes instead of losing them. Some interviewees gave anecdotes of abandoning their voluntweeter identities to escape from ``politics and emotional issues''. \citeauthor{Starbird:2011:VSD:1978942.1979102} speculate based on these anecdotes that emotional exhaustion can drive volunteers away. Perhaps work can be pursued to support these sufferers, or even keep them engaged.
+
+Some challenges were described with the volunteering effort --- aspects such as `hoaxers', seen also to emerge in the Chile 2010 earthquake (\cite{mendoza2010twitter}), caused a need for access control and verification. Scope exists for investigation into whether the motivations of hoaxers overlaps with the now-understood motivations of digital volunteers, to determine whether the emergence of hoaxers is a guaranteed or unavoidable factor in crisis.
+
+A `Frustration with Formal Response' was described by some volunteers. Larger non-governmental organizations were found to clash with the self-organized digital group, leaving volunteers feeling underappreciated, and even obstructing them by locking down the access to information. Volunteer efforts were diverted from productive activities, to battling red tape. This incompatibility between groups was demoralizing for the volunteers. It raises the question of whether there is inherent incompatibility between established groups and emergent self-organized groups (for example due to differences in resources or perceived authority), and whether there are any factors that could promote co-operation between such parties.
+
+Interesting features were pointed out about how the self-organized system handled learning. Many approaches co-existed: some participants were ``taught'' by mentors how to use the syntax, others learnt by observation (without knowing that it was a prescribed, named standard), and others still learnt from the researchers' original prescriptive tweets (these spread through hashtag searches and also retweets from other users). Though it is not known whether there were any learning failures amongst these, if it is to be assumed that all these methods successfully achieved learning, then it would be interesting to pursue the applications and effectiveness in education of this kind of distributed learning; for example, whether it is more effective for some people to be taught by peers rather than an authoritative source.
+
+A glaring ommission from the paper is analysis of the effectiveness of the volunteer organization. Though anecdotes show some successes of remote assistance (for example, chat logs showing procurement of trucks for rescues, or call minutes for phones), and that structured information was preferred by officials, there is no quantitative measurement provided of how much of a difference was made by the volunteers (e.g. number of accidents reported, response times, or people rescued), nor was there a quantitative comparison of its effectiveness with a traditional system. 
+
+%1650
+
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
+%\glsaddall
+\printbibliography
+
+\end{document}
